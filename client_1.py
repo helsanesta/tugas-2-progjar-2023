@@ -21,7 +21,7 @@ def kirim_data():
         while amount_received < amount_expected:
             data = sock.recv(1024).decode('utf-8')
             amount_received += len(data)
-            logging.warning(f"[DITERIMA DARI SERVER] JAM {data}")
+            logging.warning(f"[DITERIMA DARI SERVER] {data}")
     finally:
         logging.warning("closing")
         sock.close()
